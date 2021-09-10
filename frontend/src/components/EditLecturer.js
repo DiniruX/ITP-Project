@@ -117,8 +117,10 @@ export default class EditLecturer extends Component {
     render() {
         return (
             <div className ="container">
-                
-<center><h1><b><u>Update Lecturer Details</u></b></h1></center>
+  <div  className ="addLecturerheader">              
+<center><h1><b>Update Lecturer Details</b></h1></center>
+</div>
+<br></br>
                
             <form className="needs-validation" noValidate>
             

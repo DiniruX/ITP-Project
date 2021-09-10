@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from'axios';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 import './style.css'
+import background from '../images/admin22.png';
 
 
 export default class lecturerHome extends Component {
@@ -73,13 +74,12 @@ axios.get("/lecturers").then(res =>{
 
   render() {
     return(
+      <div style={{marginTop:'10px',backgroundImage: `url(${background})`,backgroundPosition: 'center',backgroundSize: 'cover',backgroundRepeat: 'no-repeat',}}>
       
       <div>
         <div className="row">
           <div className="col-lg-12 mt-3 mb-3">
            
-            <br></br>
-            <br></br>
             <div  className ="alllecturerheader">
             <h2><center><b>All Lecturers' Details</b></center></h2>
             </div>
@@ -91,7 +91,9 @@ axios.get("/lecturers").then(res =>{
               type="search"
               placeholder="Serach"
               name="searchQuery"
+              marginTop="15px"
               onChange={this.handleSearchArea}>
+              
               </input>
               </div>
               </div>
@@ -111,7 +113,7 @@ axios.get("/lecturers").then(res =>{
                
                   
 
-        <table className =" table table-bordered" >
+        <table class="table table-success table-striped table-bordered" style={{marginTop:'15px'}}>
         <thead className ="table-dark">
 
         <br></br>
@@ -193,7 +195,7 @@ axios.get("/lecturers").then(res =>{
 
        
         
-    
+    </div>
       </div>
       
     )

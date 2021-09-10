@@ -85,11 +85,13 @@ onsubmit = (e) =>{
 render(){
     return (
        <div className = "container" >
-           
-       <center><h1><b><u>Add New Lecturer</u></b></h1></center>
+
+         <div  className ="addLecturerheader">
+       <center><h2><b>Add New Lecturer</b></h2></center>
+       </div>
           
        <form className="needs-validation" noValidate>
-       
+       <br></br>
 <div className="mb-3">
 <label className="form-label"><b>Lecturer ID</b></label>
 <textarea class="textField" name="lecId" cols="25" rows="2" value={this.state.lecId} onChange={this.handleInputChange}></textarea>
