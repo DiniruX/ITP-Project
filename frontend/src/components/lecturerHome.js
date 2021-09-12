@@ -85,16 +85,17 @@ axios.get("/lecturers").then(res =>{
             </div>
             </div>
             <div className="col-lg-3 mt-2 mb-2">
+            <div class="form-outline">
          
               <input
               className="form-control"
               type="search"
-              placeholder="Serach"
+              placeholder="Search"
               name="searchQuery"
               marginTop="15px"
               onChange={this.handleSearchArea}>
-              
               </input>
+              </div>
               </div>
               </div>
 

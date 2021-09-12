@@ -87,7 +87,7 @@ render(){
        <div className = "container" >
 
          <div  className ="addLecturerheader">
-       <center><h2><b>Add New Lecturer</b></h2></center>
+       <center><h3><b>Add New Lecturer</b></h3></center>
        </div>
           
        <form className="needs-validation" noValidate>

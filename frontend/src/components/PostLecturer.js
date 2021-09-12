@@ -47,7 +47,7 @@ export default class PostLecturer extends Component {
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
-            saveAs(pdfBlob, 'newPdf.pdf');
+            saveAs(pdfBlob, 'lecturer.pdf');
           })
       }
     
@@ -60,7 +60,7 @@ export default class PostLecturer extends Component {
             
             <div style =  {{marginTop:'30px'}} className ="container">
                 
-               <h2><center><b>Lecturer Details</b></center></h2>
+               <h3><center><b>Lecturer Details</b></center></h3>
                 <hr/>
 
                 <dl className="row">
