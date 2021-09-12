@@ -112,7 +112,11 @@ router.post('/create-pdf', (req, res) => {
 //get the PDF
 
 router.get('/fetch-pdf', (req, res) => {
+<<<<<<< HEAD
     res.sendFile('pdfsub.pdf', { root: 'C:/Users/ADMIN/OneDrive/Desktop/Project/ITP-Project' });
+=======
+    res.sendFile('pdfsub.pdf', { root:  `${__dirname}/../..` });
+>>>>>>> 316e2e759167ca7b490887b61c9df59d04c23d3f
 })
 
 
