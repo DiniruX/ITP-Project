@@ -24,7 +24,7 @@ const AddApllicant = () => {
             User_Name,
             Password
         };
-        axios.post("http://localhost5000/applicants/AddApplicant",applicant)
+        axios.post("http://localhost:8000/applicants/AddApplicant",applicant)
         .then(res=>alert(res.data))
         .catch(err=>{console.log(err);
         });

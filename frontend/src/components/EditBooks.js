@@ -29,14 +29,14 @@ const[No_of_Copies, setNo_of_Copies] = useState("");
      setCategory('');
      setNo_of_Copies('');
      
-     axios.put(`http://localhost:5000/addbook/update/${props.match.params.id}`,addbook)
+     axios.put(`http://localhost:8000/addbook/update/${props.match.params.id}`,addbook)
      .then(res=>alert(res.data))
      .catch(err=>{console.log(err);
      });
  };
 
  useEffect(()=>{
-  axios.get(`http://localhost:5000/addBook/${props.match.params.id}`)
+  axios.get(`http://localhost:8000/addBook/${props.match.params.id}`)
   .then(res=>[
       setBook_Id(res.data.Book_Id),
       setBook_Name(res.data.Book_Name),

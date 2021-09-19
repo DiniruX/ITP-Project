@@ -7,7 +7,7 @@ const Fine = ({PayFines}) => {
     const [Fine, setFine ]=useState([])
 
     const deteleFine = id =>{
-      axios.delete(`http://localhost:5000/fines/${id}`)
+      axios.delete(`http://localhost:8000/fines/${id}`)
       .then(res => alert(res.data))
       setFine(Fine.filter(elem => elem._id !== id))
     }
@@ -46,7 +46,7 @@ const Fine = ({PayFines}) => {
                      
                       <td> 
        
-    <button onClick={()=>deteleFine(Fines._id)}deleteBook type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="fas fa-search"></i>&nbsp;Delete </button>
+    <button onClick={()=>deteleFine(Fines._id)}deleteBook type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="fas fa-trash-alt"></i>&nbsp;Delete </button>
  
     
     

@@ -22,7 +22,7 @@ const AddFine = () => {
     };
   
 
-  axios.post("http://localhost:5000/fines/addfine",addfine)
+  axios.post("http://localhost:8000/fines/addfine",addfine)
   .then(res=>alert(res.data))
   .catch(err=>{console.log(err);
   });
