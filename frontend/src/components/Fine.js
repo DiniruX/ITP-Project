@@ -44,6 +44,7 @@ const Fine = ({PayFines}) => {
                       <td>{Fines.Fines}</td>
                       <td>{Fines.Return_Date}</td>
                      
+        
                       <td> 
        
     <button onClick={()=>deteleFine(Fines._id)}deleteBook type="button" class="btn btn-danger" style={{marginTop:'10px'}} > <i class="fas fa-trash-alt"></i>&nbsp;Delete </button>
