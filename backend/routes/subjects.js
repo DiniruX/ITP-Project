@@ -112,7 +112,7 @@ router.post('/create-pdf', (req, res) => {
 //get the PDF
 
 router.get('/fetch-pdf', (req, res) => {
-    res.sendFile('pdfsub.pdf', { root:  `${__dirname}/../..` });
+    res.sendFile('pdfsub.pdf', { root:  `${__dirname}/..` });
 })
 
 

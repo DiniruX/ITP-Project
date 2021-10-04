@@ -79,6 +79,29 @@ onsubmit = (e) =>{
         }
     })
 }
+
+componentDidMount(){
+    const id = this.props.match.params.id;
+
+    axios.get(`/reviewer/${id}`).then((res)=>{
+        if(res.data.success){
+            this.setState({
+                
+                lecFname:res.data.post.lecFname,
+                lecLname:res.data.post.lecLname,
+                nic:res.data.post.nic,
+                dob:res.data.post.dob,
+                email:res.data.post.email,
+                cNumber:res.data.post.cNumber,
+                address:res.data.post.address,
+                Rdate:res.data.post.Rdate
+            });
+
+            console.log(this.state.post);
+        }
+    });
+}
+
 rand=(min, max)=>{
     return Math.floor(Math.random()*max-min+1)+min;
   }
@@ -91,7 +114,8 @@ render(){
          width: '1500px',
          border: '1px solid black',
          marginRight:'250px',
-         marginLeft:'200px'}}>
+         marginLeft:'200px'
+         }}>
        <div className = "container" >
            <br></br>
        <center><h3><b>Add New Lecturer</b></h3></center>
@@ -100,7 +124,7 @@ render(){
 
 <div className="col-md-12">
 <label className="form-label"><b>Lecturer ID</b></label>
-<input className="form-control" name="lecId" value={this.state.lecId} onChange={this.handleInputChange}></input>
+<input style={{color:'red',fontWeight:'bold'}}className="form-control" name="lecId" value={this.state.lecId} onChange={this.handleInputChange}></input>
 </div><br/>
 
 <div className="col-md-12">
@@ -121,7 +145,7 @@ render(){
 
 <div className="col-md-12">
 <label  className="form-label"><b>Date of birth</b></label>
-<input type="date" className="form-control" placeholder ="D/M/Y"name="dob" value={this.state.dob} onChange={this.handleInputChange}/>
+<input  className="form-control" name="dob" value={this.state.dob} onChange={this.handleInputChange}/>
 </div><br/>
 
 <div className="col-md-12">
@@ -141,12 +165,12 @@ render(){
 
 <div className="col-md-12">
 <label className="form-label"><b>Username</b></label>
-<input className="form-control" name="username" value={this.state.username} onChange={this.handleInputChange}></input>
+<input style={{color:'red',fontWeight:'bold'}} className="form-control" name="username" value={this.state.username} onChange={this.handleInputChange}></input>
 </div><br/>
 
 <div className="col-md-12">
 <label className="form-label"><b>Password</b></label>
-<input className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange}></input>
+<input style={{color:'red',fontWeight:'bold'}} className="form-control" name="password" value={this.state.password} onChange={this.handleInputChange}></input>
 </div><br/>
 
 
@@ -169,7 +193,7 @@ render(){
 
 <div className="col-md-12">
 <label  className="form-label"><b>Registration Date</b></label>
-<input type="date" className="form-control" name="Rdate" value={this.state.Rdate} onChange={this.handleInputChange}/>
+<input className="form-control" name="Rdate" value={this.state.Rdate} onChange={this.handleInputChange}/>
 </div><br/>
 
 

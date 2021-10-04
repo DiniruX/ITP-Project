@@ -57,6 +57,8 @@ import viewRegistrations from './components/viewRegistrations'
 import CreateRegistration from './components/CreateRegistration';
 import detailRequest from './components/detailRequest';
 import detailsHome from './components/detailsHome';
+import registrationAdd from './components/registrationAdd';
+
 
 
 
@@ -229,7 +231,7 @@ useEffect(()=>{
         <Route path="/subjectclientadd/:id" component={SubAddClient}></Route>
 
         <Route path ="/lechome" component ={lecturerHome}></Route>
-        <Route path= "/addLec" component={addLecturer}></Route>
+        <Route path= "/addLec/:id" component={addLecturer}></Route>
         <Route path ="/editLec/:id" component={EditLecturer}></Route>
         <Route path ="/postLec/:id" component={PostLecturer}></Route>
         <Route path ="/timetableReq" component={timetableUpdate}></Route> 
@@ -240,8 +242,8 @@ useEffect(()=>{
         <Route path ="/lecturerRegistration" component={CreateRegistration}></Route>
         <Route path ="/publishNotice" component={detailRequest}></Route>
         <Route path ="/viewNotice" component={detailsHome}></Route>
-        
-        
+        <Route path ="/lecturerProfile" component={registrationAdd}></Route>
+
 
         <Route   exact path="/view"  render={()=> <Courses posts={posts} />} />
         <Route path="/course/:id"    render={(props)=>  <Course {...props} posts={posts} />} />

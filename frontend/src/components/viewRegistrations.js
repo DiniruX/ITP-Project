@@ -79,7 +79,7 @@ class viewRegistrations extends Component {
                   <br></br>
                   <button className="btn btn-secondary" onClick={event => this.navigateDownload(event, value.uploads)}> <i class="fa fa-file" aria-hidden="true"></i> <b> View Curriculum Vitae</b></button>
 
-                  <a href = "/addLec" className="btn btn-success" style={{ marginLeft: "2%" }} > <i class="fa fa-plus" aria-hidden="true"></i><b> Add to the Institute</b></a>
+                  <a href = {`/addLec/${value._id}`} className="btn btn-success" style={{ marginLeft: "2%" }} target="_blank" rel="noopener noreferrer"> <i class="fa fa-plus" aria-hidden="true" ></i><b> Add to the Institute</b></a>
 
 
                   <button className="btn btn-danger" style={{ marginLeft: "2%" }} onClick={event => this.navigateDelete(event, value._id)}><i class="fa fa-times" aria-hidden="true"></i> <b>Reject Registration </b></button>
