@@ -144,7 +144,7 @@ export default class Registration extends Component {
                 class_name: "English",
                 course_name: "IT",
                 date_of_birth: "1999-07-03",
-                nic: "996878675V",
+                nic: "99687867523V",
                 email: "gpmalshika@gmail.com",
                 address: "Kalamulla,Kalutara",
                 telephone: "0711798124",
