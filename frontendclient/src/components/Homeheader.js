@@ -30,7 +30,7 @@ export default class Homeheader extends Component {
               <a className="nav-link active " aria-current="page" href="/lecturerpage" style={{ fontSize: '23px' }}>Lecturers</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active " aria-current="page" href="/" style={{ fontSize: '23px' }}>Library</a>
+              <a className="nav-link active " aria-current="page" href="/clientlibrary" style={{ fontSize: '23px' }}>Library</a>
             </li>
             <li className="nav-item">
               <a className="nav-link active " aria-current="page" href="/special" style={{ fontSize: '23px' }}>Events</a>
@@ -47,7 +47,7 @@ export default class Homeheader extends Component {
                 <div class="dropdown-content">
                   <a href="/leclogin" target="_blank" rel="noopener noreferrer"><b>Get leave</b></a>
                   <a href="/leclogin2" target="_blank" rel="noopener noreferrer"><b>Update time table</b></a>
-                  
+                  <a href="/leclogin3" target="_blank" rel="noopener noreferrer"><b>Mark student attendance</b></a>
                 </div>
               </div>
             </li>
